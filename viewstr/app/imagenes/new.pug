@@ -1,0 +1,21 @@
+extends ../../layout.pug
+block contenido 
+  
+  br 
+  br
+  br
+  br
+  h1(class="texto-center") Suba la imagen
+  form( action="/app/imagenes", method="post", class="texto-center container-form") 
+    div(class="mdl-textfield mdl-js-textfield")        
+        input(type="text", name="nombre", placeholder="nombre de la imagen", id="title", class="mdl-textfield__input")
+        label(for="title", class="mdl-textfield__label") Titulo  
+    br   
+    div(class="mdl-textfield mdl-js-textfield")     
+      input(type="file", name="imagen", placeholder="< seleccione la imagen", id="imagen", class="mdl-textfield__input")
+      label(for="imagen", class="mdl-textfield__label") Buscar:
+      
+    div(class="right")  
+      input(type="submit", value="Subir", class="mdl-button mdl-js-button mdl-button--colored  mdl-button--raised  mdl-js-ripple-effect")      
+    
+      

@@ -1,0 +1,12 @@
+extends ./layout.pug
+block contenido
+  
+    h1  Hola  #{name}!!! 
+    div(class="mdl-grid")
+        div(class="mdlmdl-cell mdl-cell--4-col mdl-cell--6-col-tablet")
+          a(href="/signup") Registrarse
+        div(class="mdlmdl-cell mdl-cell--4-col mdl-cell--6-col-tablet")    
+          a(href="/login") Iniciar Seción 
+         
+    form( action="/", method="post") 
+        input(  type="submit", value="enviar", class="mdl-button mdl-js-button mdl-button--colored")

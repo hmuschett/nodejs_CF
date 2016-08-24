@@ -1,0 +1,27 @@
+extends ./layout.pug
+block contenido 
+  form( action="/users", method="post" class="texto-center center container-form") 
+    div(class="mdl-textfield mdl-js-textfield")     
+        label(for="email", class="mdl-textfield__label") Email:
+        input(type="text", name="email", placeholder="email", id="email", class="mdl-textfield__input")
+    br
+    div(class="mdl-textfield mdl-js-textfield")     
+        label(for="name", class="mdl-textfield__label") Nombre:
+        input(type="text", name="name", placeholder="Nombre", id="name", class="mdl-textfield__input")
+    br  
+    div(class="mdl-textfield mdl-js-textfield")     
+        label(for="user_name", class="mdl-textfield__label") Nombre usuario:
+        input(type="text", name="user_name", placeholder="Nombre de usuario", id="user_name", class="mdl-textfield__input")
+    br
+    div(class="mdl-textfield mdl-js-textfield")       
+          label(for="password", class="mdl-textfield__label") Password:
+          input(type="password", name="password", placeholder="password", id="password", class="mdl-textfield__input")
+    br
+    div(class="mdl-textfield mdl-js-textfield")     
+        label(for="password_confirmation", class="mdl-textfield__label") Comfirma el Password:
+        input(type="password", name="password_confirmation", placeholder="confirma el pass", id="password_confirmation", class="mdl-textfield__input") 
+  
+    br    
+    div(class="mdl-layout-spacer") 
+    div(class="right")  
+      input(type="submit", value="Iniciar Seción", class="mdl-button mdl-js-button mdl-button--colored  mdl-button--raised")      

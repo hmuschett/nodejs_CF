@@ -1,0 +1,22 @@
+extends ./layout.pug
+block contenido 
+  
+  br 
+  br
+  br
+  br
+  h1(class="texto-center") Ingrese sus Datos
+  form( action="/sessions", method="post", class="texto-center container-form") 
+    div(class="mdl-textfield mdl-js-textfield")        
+        input(type="text", name="email", placeholder="email", id="email", class="mdl-textfield__input")
+        label(for="email", class="mdl-textfield__label") Email:  
+    br   
+    div(class="mdl-textfield mdl-js-textfield")     
+      input(type="password", name="password", placeholder="password", id="password", class="mdl-textfield__input")
+      label(for="password", class="mdl-textfield__label") Password:
+      
+    div(class="right")  
+      input(type="submit", value="Iniciar Seción", class="mdl-button mdl-js-button mdl-button--colored  mdl-button--raised  mdl-js-ripple-effect")      
+    
+        
+      
