@@ -1,4 +1,21 @@
 extends .././layout.pug
+block logout
+  a(class="mdl-navigation__link withe-black" href="/logout") Salir
+
 block contenido
-  h1 estoy aqui #{user.name}
-  a(href="/app/imagenes/new") subir una nueva imagen
+    h1 estoy aqui #{user.name}
+    a(href="/app/imagenes/new") subir una nueva imagen
+    
+    div(class="mdl-grid")
+      each img in imgenes
+        div(class="mdl-cell mdl-cell--4-col")
+          div(class="mdl-card mdl-shadow--2dp") 
+            
+            div(class="mdl-card__media")  
+              img(src="/staticfiles/imagenes/"+img._id+"."+img.extension,
+               width="333px", hight="330px")
+            div(class="mdl-card__title")   
+             h2(class="mdl-card__title-text") #{img.title}   
+            div(class="mdl-card__supporting-text")  
+              p= img.creator.name
+    script(src="/staticfiles/js/client.js")

@@ -7,6 +7,20 @@ html(lang="es")
     
     script(src="/staticfiles/js/material.min.js")
     link( href="/staticfiles/css/my.css", rel="stylesheet")
+    script(src="/socket.io/socket.io.js")  
   body
-    div(class="container")  
-     block contenido
+    div(class="mdl-layout mdl-js-layout mdl-layout--fixed-header")
+      hander(class="mdl-layout__header")
+        div(class="mdl-layout__header-row")
+          span(class="mdl-layout-title") Curso CF
+          div(class="mdl-layout-spacer")
+          nav(class="mdl-navigation mdl-layout--large-screen-only")
+            a(class="mdl-navigation__link withe-black" href="/app") Inicio
+            a(class="mdl-navigation__link withe-black" href="/app/imagenes/new") Subir Imagenes
+            a(class="mdl-navigation__link withe-black" href="/app/imagenes") Mis Imágenes
+            block logout
+              
+        
+      main(class="mdl-layout__content") 
+        div(class="page-content container")
+          block contenido

@@ -1,0 +1,23 @@
+extends ../../layout
+block contenido
+  div(class="mdl-grid")
+    div(class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-phone")
+      table(class="mdl-data-table mdl-js-data-table margin-top ")    
+       thead
+         tr
+           th(class="mdl-data-table__cell--non-numeric") Nombre
+           th Editar
+           th Eliminar
+         tbody
+           each imagen in imagenes
+             - var id= imagen._id
+              tr      
+                td(class="mdl-data-table__cell--non-numeric") 
+                  h6=imagen.title
+                td                
+                  a(href="/app/imagenes/"+imagen._id+"/edit") Editar
+                td
+                  form(action="/app/imagenes/"+id+"?_method=DELETE", method="post", class="link")
+                    
+                     button(type="submit", value="Eliminar", class="mdl-button ") Eliminar
+        

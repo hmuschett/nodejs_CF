@@ -6,6 +6,7 @@ var User=require('../models/user').User;//import {User} from './models/user';
        res.redirect("/login");
    }else{
       User.findById(req.session.user_id).then((user)=>{
+         console.log(user);
           res.locals={user: user};
           next();
       },(err)=>{

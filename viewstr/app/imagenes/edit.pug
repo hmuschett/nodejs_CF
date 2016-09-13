@@ -1,0 +1,23 @@
+extends ../../layout.pug
+block contenido 
+  
+  br 
+  br
+  br
+  br
+  h1(class="texto-center") Modifique la imagen
+  - var title = img.title
+  - var id = img.id
+  form( action="/app/imagenes/"+id+"?_method=PUT", method="post", class="texto-center container-form") 
+    div(class="mdl-textfield mdl-js-textfield")
+        input(type="text", name="titulo", placeholder="nombre de la imagen", id="titulo", class="mdl-textfield__input", value=title)
+        label(for="titulo", class="mdl-textfield__label") Titulo  
+    br   
+    //- div(class="mdl-textfield mdl-js-textfield")     
+    //-   input(type="file", name="imagen", placeholder="< seleccione la imagen", id="imagen", class="mdl-textfield__input")
+    //-   label(for="imagen", class="mdl-textfield__label") Buscar:
+      
+    div(class="right")  
+      input(type="submit", value="Guardar", class="mdl-button mdl-js-button mdl-button--colored  mdl-button--raised  mdl-js-ripple-effect")      
+    
+      

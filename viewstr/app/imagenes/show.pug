@@ -1,3 +1,12 @@
 extends ../../layout.pug
 block contenido 
-  h1= imagen.title
+  div(class="mdl-card mdl-shadow--2dp") 
+    
+    div(class="mdl-card__media")  
+      img(src="/staticfiles/imagenes/"+img._id+"."+img.extension,
+       width="333px", hight="330px")
+    div(class="mdl-card__title")   
+     h1(class="mdl-card__title-text") #{img.title}   
+    div(class="mdl-card__supporting-text")  
+     p= img.creator.name
+      
