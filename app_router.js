@@ -48,7 +48,7 @@ router.route("/imagenes/:id")
   res.locals.img.save();
   res.render("app/imagenes/show");
 })
-.delete((req, res)=>{
+.delete((req, res)=>  {
 Imagen.findOneAndRemove({_id: req.params.id}).then(
   ()=>{res.redirect("/app/imagenes");
   console.log("ya esta llegando por el method dalete");
